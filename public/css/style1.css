@@ -1,0 +1,126 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Piazzolla:ital@1&display=swap'); */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Piazzolla', serif;
+}
+body {
+    background-image: url('../images/default.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: white;
+    
+    text-shadow: 2px 2px 1px black;
+    font-family: "Palatino", "Book Antiqua", serif;
+}
+
+.rounded{
+    width: 50%;
+    height: 50px;
+}
+
+#intro {
+    position: absolute;
+    padding: 15px 25px;
+    position: center;
+    background-color: black;
+}
+
+
+
+.parent{
+    width: 100vw;
+    height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+}
+#weatherContainer {
+    
+    background-color: rgba(0, 0, 0, 0.25);
+    box-shadow: 1px 1px 5px black;
+    color: white;
+    margin-top: 100px;
+    padding-top: 50px;
+    width: 330px;
+    height: 300px;
+   
+    border-radius: 10px;
+    position: absolute;
+    
+
+}
+#weatherContainer h1 {
+    margin: 5px;
+    font-size: 42px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+#searchContainer {
+   
+    padding-top:10px ;
+    z-index: 1;
+    
+}
+#searchContainer input {
+    font-size: medium;
+    width: 17rem;
+    height: 3rem ;
+}
+#searchContainer button {
+    font-size: medium;
+
+    background-color:black;
+    color: white;
+    width: 7rem;
+    height: 3rem;
+}
+.searchControl {
+    box-shadow: 2px 2px 5px black;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+@media (min-width: 600px) {
+
+    #searchContainer input{
+        width: 240px;
+        height: 60px;
+    }
+    #searchContainer button {
+        width: 90px;
+        height: 60px;
+        
+    }
+
+
+#weatherContainer {
+    width: 440px;
+    height: 400px;
+}
+}
+#weatherMain {
+    display: block;
+    margin-bottom: 20px;
+}
+#weatherMain div {
+    display: inline-block;
+}
+#weatherDescriptionHeader {
+    font-size: 28px;
+    vertical-align: 50%;
+}
+#temperature {
+    font-size: 38px;
+    vertical-align: 25%;
+}
+.bottom-details {
+    display: block;
+    font-size: 24px;
+    text-align: right;
+}
+hr {
+    margin-bottom: 20px;
+}
