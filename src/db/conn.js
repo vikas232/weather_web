@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost:27017/webResistion1",{
+mongoose.connect("MONGO_URL",{
     useNewUrlParser:true,
     useUnifiedTopology:true,
     useCreateIndex:true

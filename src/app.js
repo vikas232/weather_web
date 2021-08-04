@@ -1,4 +1,5 @@
 require('dotenv').config();
+
 const express = require("express")
 const path = require("path");
 const app = express();
@@ -7,11 +8,26 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const cookie = require("cookie");
 const cookiePaser = require("cookie-parser");
+const mongoose = require("mongoose");
 
 
 
+// require("./db/conn"); 
 
-require("./db/conn");
+// connect to mongoose at atlas
+mongoose.connect(process.env.DB,{
+    useNewUrlParser:true,
+    useUnifiedTopology:true,
+    useCreateIndex:true,
+    useFindAndModify:false
+    
+}).then(()=>{
+    console.log('connect succussful');
+}).catch((err)=>{
+     console.log(err);
+})
+
+
 const Register = require("./models/registers")
 const auth = require("./middleware/auth")
 const port = process.env.PORT || 4000 ;
@@ -144,7 +160,7 @@ app.get("/register",(req,res)=>{
        const isMatch = await bcrypt.compare(password,useremail.password);
 
        const token = await useremail.generateAuthToken();
-        console.log("the token part" + token);
+        // console.log("the token part" + token);
 
         res.cookie("jwt",token,{
           expires: new Date(Date.now() + 600000),
