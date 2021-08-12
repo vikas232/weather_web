@@ -10,6 +10,12 @@ It helps determine future climate expectations. Meteorology focuses more on curr
 ### Summary:
 This is a simple weather forecast web app that uses some APIs to fetch forecast data from the [OpenWeatherMap](https://openweathermap.org).
 
+### Screen Short:
+![homepage](https://user-images.githubusercontent.com/69753273/129140571-b79559f2-b21a-4bae-b109-703a61c013b6.png)
+
+![weatherpage](https://user-images.githubusercontent.com/69753273/129140641-e7093bb4-47d5-4b59-9ed9-defd3e071f90.png)
+
+
 ### Features:
   * Displays the weather forecast of any location across the world
   * Provides details about the temperature and weather condition.
